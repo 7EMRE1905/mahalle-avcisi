@@ -1,0 +1,258 @@
+{
+ "kuafor": {
+  "ad": "Kuaför",
+  "agirlik": 30,
+  "renk": "#A9475C",
+  "schema": "HairSalon",
+  "slogan": "{semt}'de saçınız emin ellerde. Randevunuzu bir telefonla alın.",
+  "hizmetler": [
+   "Saç kesimi",
+   "Fön",
+   "Saç boyama",
+   "Röfle ve ombre",
+   "Keratin bakım",
+   "Gelin ve özel gün saçı"
+  ],
+  "stil": "zarif",
+  "tanitim": "{ad}, {semt}'de kesimden renge, günlük fönden özel gün saçına kadar her şeyi yapan bir kuaför. Randevunuzu telefonla ya da WhatsApp'tan alabilirsiniz."
+ },
+ "berber": {
+  "ad": "Berber",
+  "agirlik": 28,
+  "renk": "#B8873B",
+  "schema": "HairSalon",
+  "slogan": "{semt}'nin berberi. Sıra beklemeden, randevuyla.",
+  "hizmetler": [
+   "Saç kesimi",
+   "Sakal tıraşı ve şekillendirme",
+   "Saç ve sakal paketi",
+   "Cilt bakımı",
+   "Çocuk tıraşı"
+  ],
+  "stil": "modern",
+  "tanitim": "{ad}, {semt}'de klasik kesim, sakal ve bakım için uğrayabileceğiniz bir berber. Beklememek için önceden arayıp sıranızı ayırtın."
+ },
+ "guzellik": {
+  "ad": "Güzellik salonu",
+  "agirlik": 30,
+  "renk": "#8C5A78",
+  "schema": "BeautySalon",
+  "slogan": "{semt}'de cilt bakımından maniküre, kendinize ayıracağınız bir saat.",
+  "hizmetler": [
+   "Cilt bakımı",
+   "Manikür",
+   "Pedikür",
+   "Kaş ve kirpik",
+   "Ağda",
+   "Epilasyon"
+  ],
+  "stil": "zarif",
+  "tanitim": "{ad}, {semt}'de cilt bakımı, manikür, pedikür ve kaş-kirpik uygulamaları yapan bir güzellik salonu. Uygun saatinizi telefonla ayarlayalım."
+ },
+ "dis": {
+  "ad": "Diş kliniği",
+  "agirlik": 26,
+  "renk": "#1F7A78",
+  "schema": "Dentist",
+  "slogan": "{semt}'de diş sağlığınız için randevu alın.",
+  "hizmetler": [
+   "Muayene ve kontrol",
+   "Dolgu",
+   "Kanal tedavisi",
+   "Diş taşı temizliği",
+   "Diş beyazlatma",
+   "İmplant"
+  ],
+  "stil": "ferah",
+  "tanitim": "{ad}, {semt}'de muayeneden tedaviye diş sağlığınız için hizmet veren bir klinik. Randevu için arayabilir ya da WhatsApp'tan yazabilirsiniz."
+ },
+ "veteriner": {
+  "ad": "Veteriner",
+  "agirlik": 24,
+  "renk": "#3D7A4A",
+  "schema": "VeterinaryCare",
+  "slogan": "{semt}'de can dostunuz için muayene, aşı ve bakım.",
+  "hizmetler": [
+   "Muayene",
+   "Aşı takvimi",
+   "Kısırlaştırma",
+   "Pet kuaför",
+   "Mama ve aksesuar"
+  ],
+  "stil": "ferah",
+  "tanitim": "{ad}, {semt}'de kedi ve köpek dostlarımız için muayene, aşı ve bakım hizmeti veriyor. Acil durumlarda önce arayın."
+ },
+ "saglik": {
+  "ad": "Klinik",
+  "agirlik": 22,
+  "renk": "#2D5BA8",
+  "schema": "MedicalClinic",
+  "slogan": "{semt}'de randevunuzu kolayca alın.",
+  "hizmetler": [
+   "Muayene",
+   "Kontrol",
+   "Danışmanlık",
+   "Randevu"
+  ],
+  "stil": "ferah",
+  "tanitim": "{ad}, {semt}'de hizmet veren bir sağlık merkezi. Randevu ve bilgi için telefonla ulaşabilirsiniz."
+ },
+ "kafe": {
+  "ad": "Kafe",
+  "agirlik": 18,
+  "renk": "#9A5B34",
+  "schema": "CafeOrCoffeeShop",
+  "slogan": "{semt}'de kahveniz, tatlınız ve sohbetiniz için.",
+  "hizmetler": [
+   "Kahveler",
+   "Çaylar",
+   "Tatlılar",
+   "Kahvaltı",
+   "Paket servis"
+  ],
+  "stil": "sicak",
+  "tanitim": "{ad}, {semt}'de kahvenizi içip oturabileceğiniz, tatlınızı paket alabileceğiniz bir kafe. Sizi bekliyoruz."
+ },
+ "restoran": {
+  "ad": "Restoran",
+  "agirlik": 18,
+  "renk": "#A63D2A",
+  "schema": "Restaurant",
+  "slogan": "{semt}'de taze ve sıcak. Masanızı ayırtın ya da paket söyleyin.",
+  "hizmetler": [
+   "Çorbalar",
+   "Ana yemekler",
+   "Izgaralar",
+   "Tatlılar",
+   "Paket servis"
+  ],
+  "stil": "sicak",
+  "tanitim": "{ad}, {semt}'de oturup yemek yiyebileceğiniz ya da paket sipariş verebileceğiniz bir restoran. Masa ayırtmak için arayın."
+ },
+ "firin": {
+  "ad": "Fırın ve pastane",
+  "agirlik": 16,
+  "renk": "#A8702A",
+  "schema": "Bakery",
+  "slogan": "{semt}'de her sabah taze. Siparişle pasta da hazırlıyoruz.",
+  "hizmetler": [
+   "Ekmek çeşitleri",
+   "Poğaça ve simit",
+   "Kurabiyeler",
+   "Yaş pasta",
+   "Siparişe özel pasta"
+  ],
+  "stil": "sicak",
+  "tanitim": "{ad}, {semt}'de her sabah taze ekmek ve hamur işi çıkaran bir fırın. Özel gün pastaları için önceden sipariş alıyoruz."
+ },
+ "oto": {
+  "ad": "Oto servis",
+  "agirlik": 20,
+  "renk": "#C8452C",
+  "schema": "AutoRepair",
+  "slogan": "{semt}'de aracınız için bakım, onarım ve yıkama.",
+  "hizmetler": [
+   "Periyodik bakım",
+   "Mekanik onarım",
+   "Lastik",
+   "Yıkama",
+   "Ekspertiz öncesi kontrol"
+  ],
+  "stil": "modern",
+  "tanitim": "{ad}, {semt}'de aracınızın bakımı, onarımı ve temizliği için hizmet veriyor. Aracınızı getirmeden önce arayıp yer ayırtın."
+ },
+ "butik": {
+  "ad": "Butik",
+  "agirlik": 17,
+  "renk": "#8A6A4F",
+  "schema": "ClothingStore",
+  "slogan": "{semt}'de yeni sezon. Gelmeden önce WhatsApp'tan sorun.",
+  "hizmetler": [
+   "Yeni sezon",
+   "Elbise",
+   "Gömlek ve bluz",
+   "Aksesuar",
+   "Hediye paketi"
+  ],
+  "stil": "zarif",
+  "tanitim": "{ad}, {semt}'de seçili parçalar sunan bir butik. Yeni gelenleri sormak için WhatsApp'tan yazabilirsiniz."
+ },
+ "emlak": {
+  "ad": "Emlak ofisi",
+  "agirlik": 22,
+  "renk": "#2F5D50",
+  "schema": "RealEstateAgent",
+  "slogan": "{semt}'de satılık ve kiralık evler için bir telefon yeter.",
+  "hizmetler": [
+   "Satılık daire",
+   "Kiralık daire",
+   "İşyeri",
+   "Ücretsiz değerleme"
+  ],
+  "stil": "modern",
+  "tanitim": "{ad}, {semt}'de satılık ve kiralık konut ile işyeri için hizmet veren bir emlak ofisi. Aradığınızı anlatın, size uygun olanları gösterelim."
+ },
+ "cicekci": {
+  "ad": "Çiçekçi",
+  "agirlik": 19,
+  "renk": "#9C3D5C",
+  "schema": "Florist",
+  "slogan": "{semt}'de aynı gün çiçek teslimatı.",
+  "hizmetler": [
+   "Buket",
+   "Saksı çiçeği",
+   "Açılış çelengi",
+   "Özel gün tasarımı",
+   "Aynı gün teslimat"
+  ],
+  "stil": "zarif",
+  "tanitim": "{ad}, {semt}'de buket, saksı çiçeği ve özel gün tasarımları hazırlayan bir çiçekçi. Siparişinizi telefonla verebilirsiniz."
+ },
+ "optik": {
+  "ad": "Optik",
+  "agirlik": 18,
+  "renk": "#3F4C8C",
+  "schema": "Optician",
+  "slogan": "{semt}'de gözlük, lens ve göz ölçümü.",
+  "hizmetler": [
+   "Numaralı gözlük",
+   "Güneş gözlüğü",
+   "Lens",
+   "Göz ölçümü",
+   "Tamir ve ayar"
+  ],
+  "stil": "ferah",
+  "tanitim": "{ad}, {semt}'de numaralı gözlük, güneş gözlüğü ve lens için hizmet veren bir optik. Çerçeve seçmek için uğrayın."
+ },
+ "terzi": {
+  "ad": "Terzi ve kuru temizleme",
+  "agirlik": 15,
+  "renk": "#5B4A8A",
+  "schema": "DryCleaningOrLaundry",
+  "slogan": "{semt}'de tadilat, dikim ve temizlik.",
+  "hizmetler": [
+   "Paça ve tadilat",
+   "Fermuar değişimi",
+   "Özel dikim",
+   "Kuru temizleme",
+   "Ütü"
+  ],
+  "stil": "zarif",
+  "tanitim": "{ad}, {semt}'de tadilat, dikim ve temizlik işleriniz için hizmet veriyor. Kıyafetinizi getirmeden önce arayabilirsiniz."
+ },
+ "genel": {
+  "ad": "İşletme",
+  "agirlik": 10,
+  "renk": "#C0462B",
+  "schema": "LocalBusiness",
+  "slogan": "{semt}'de hizmetinizdeyiz.",
+  "hizmetler": [
+   "Ürünlerimiz",
+   "Hizmetlerimiz",
+   "Sipariş",
+   "Bilgi için arayın"
+  ],
+  "stil": "modern",
+  "tanitim": "{ad}, {semt}'de hizmet veren bir işletme. Bilgi ve sipariş için telefonla ya da WhatsApp'tan ulaşabilirsiniz."
+ }
+}

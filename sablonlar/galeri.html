@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{SEMT}} · Mahalle Avcısı</title>
+<style>
+:root{--ink:#15161a;--gri:#61656e;--kor:#FF4D2E;--kagit:#fbfaf7;--cizgi:#e9e5dc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--kagit);color:var(--ink);line-height:1.45}
+.ust{padding:22px 16px 10px;max-width:1100px;margin:0 auto}
+h1{font-size:28px;letter-spacing:-.02em}
+.alt{color:var(--gri);font-size:14px;margin-top:4px}
+.ozet{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.ozet span{background:#fff;border:1px solid var(--cizgi);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700}
+.filtre{display:flex;gap:8px;overflow-x:auto;padding:12px 16px;max-width:1100px;margin:0 auto}
+.filtre button{border:1px solid var(--cizgi);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;font-weight:700;white-space:nowrap;cursor:pointer}
+.filtre button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;padding:8px 16px 40px;max-width:1100px;margin:0 auto}
+.kart{background:#fff;border:1px solid var(--cizgi);border-radius:18px;padding:0 16px 16px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.kart .foto{margin:0 -16px 4px;height:150px;background:#eee}
+.kart .foto img{width:100%;height:100%;object-fit:cover;display:block}
+.kart .bas{display:flex;align-items:center;gap:10px}
+.puan{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
+.kart h3{font-size:17px;line-height:1.2}
+.kart small{color:var(--gri);font-size:13px}
+.neden{font-size:12.5px;color:var(--gri)}
+.eylem{display:flex;gap:8px}
+.eylem a{color:var(--ink);flex:1;text-align:center;text-decoration:none;font-weight:700;font-size:14px;padding:10px;border-radius:12px;border:1px solid var(--cizgi)}
+.eylem a.ana{background:var(--ink);color:#fff;border-color:var(--ink)}
+.durum{display:flex;gap:6px}
+.durum button{flex:1;font:inherit;font-size:13px;font-weight:700;padding:8px;border-radius:10px;border:1px solid var(--cizgi);background:#fff;cursor:pointer}
+.durum button.on[data-d="gittim"]{background:#FFF3C4;border-color:#E3B800}
+.durum button.on[data-d="evet"]{background:#D9F5E4;border-color:#14A06B}
+.durum button.on[data-d="hayir"]{background:#FDE2DE;border-color:#E5352B}
+footer{text-align:center;color:var(--gri);font-size:12px;padding:0 16px 30px}
+</style>
+</head>
+<body>
+<div class="ust">
+  <h1>{{SEMT}}: sitesi olmayan dükkânlar</h1>
+  <div class="alt">Satış şansı puanına göre sıralı · tarama {{TARIH}} · durumlar bu cihazda saklanır</div>
+  <div class="ozet" id="ozet"></div>
+</div>
+<div class="filtre" id="filtre"></div>
+<div class="izgara" id="izgara"></div>
+<footer>Mahalle Avcısı · yapaytu.com · Dükkân verisi © OpenStreetMap katkıcıları</footer>
+<script>
+const V = {{VERI}};
+const ANAHTAR = "mahalle-avcisi:" + location.pathname;
+let D = {};
+try { D = JSON.parse(localStorage.getItem(ANAHTAR) || "{}"); } catch (e) {}
+const kaydet = () => { try { localStorage.setItem(ANAHTAR, JSON.stringify(D)); } catch (e) {} };
+let secili = "Hepsi";
+const renk = p => p >= 75 ? "#14A06B" : p >= 55 ? "#E3A008" : "#9CA3AF";
+function ciz() {
+  const sayi = s => Object.values(D).filter(x => x === s).length;
+  document.getElementById("ozet").innerHTML =
+    `<span>${V.length} site hazır</span><span>Gidilen: ${sayi("gittim") + sayi("evet") + sayi("hayir")}</span><span>Evet: ${sayi("evet")}</span><span>Hayır: ${sayi("hayir")}</span>`;
+  const sek = ["Hepsi", ...new Set(V.map(x => x.sektor))];
+  document.getElementById("filtre").innerHTML = sek.map(s => `<button class="${s === secili ? "on" : ""}">${s}</button>`).join("");
+  document.querySelectorAll("#filtre button").forEach(b => b.onclick = () => { secili = b.textContent; ciz(); });
+  const L = V.filter(x => secili === "Hepsi" || x.sektor === secili);
+  document.getElementById("izgara").innerHTML = L.map(x => `
+    <div class="kart">
+      <a class="foto" href="${x.site}"><img src="${x.foto}" alt="" loading="lazy"></a>
+      <div class="bas"><div class="puan" style="background:${renk(x.puan)}">${x.puan}</div>
+        <div><h3>${esc(x.ad)}</h3><small><b style="color:${x.renk}">${esc(x.sektor)}</b>${x.adres ? " · " + esc(x.adres) : ""}</small></div></div>
+      <div class="neden">${x.neden.map(esc).join(" · ")}</div>
+      <div class="eylem"><a class="ana" href="${x.site}">Sitesini aç</a>${x.tel ? `<a href="tel:${x.tel.replace(/[^\d+]/g, "")}">Ara</a>` : ""}</div>
+      <div class="durum" data-id="${x.id}">${["gittim", "evet", "hayir"].map(d => `<button data-d="${d}" class="${D[x.id] === d ? "on" : ""}">${{gittim: "Gittim", evet: "Evet dedi", hayir: "Hayır"}[d]}</button>`).join("")}</div>
+    </div>`).join("");
+  document.querySelectorAll(".durum button").forEach(b => b.onclick = () => {
+    const id = b.parentElement.dataset.id; D[id] = D[id] === b.dataset.d ? undefined : b.dataset.d; kaydet(); ciz();
+  });
+}
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c])); }
+ciz();
+</script>
+</body>
+</html>

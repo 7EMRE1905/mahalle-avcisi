@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{AD}} | {{SEMT}} {{SEKTOR}}</title>
+<meta name="description" content="{{ACIKLAMA}}">
+<meta property="og:title" content="{{AD}}">
+<meta property="og:description" content="{{ACIKLAMA}}">
+<meta property="og:image" content="img/1.jpg">
+<meta name="theme-color" content="{{RENK}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{FONTLAR}}" rel="stylesheet">
+<script type="application/ld+json">{{LD}}</script>
+<style>
+:root{--vurgu:{{RENK}}}
+/* stiller: zarif (kuaför, güzellik, butik), modern (berber, oto, emlak), sicak (kafe, restoran, fırın), ferah (sağlık) */
+.zarif{--zemin:#F5F0E8;--zemin2:#EDE5D8;--yazi:#231F1B;--soluk:#6E655B;--cizgi:#D9CFBF;--baslik:"Cormorant Garamond",Georgia,serif;--govde:"Jost",system-ui,sans-serif;--bw:500;--bs:italic;--bt:none;--bh:-.01em}
+.modern{--zemin:#F2F0EC;--zemin2:#151514;--yazi:#151514;--soluk:#5F5D58;--cizgi:#D6D2CA;--baslik:"Oswald",Impact,sans-serif;--govde:"Inter",system-ui,sans-serif;--bw:600;--bs:normal;--bt:uppercase;--bh:.01em}
+.sicak{--zemin:#FBF6EE;--zemin2:#F1E6D6;--yazi:#2A211B;--soluk:#74675B;--cizgi:#E3D6C3;--baslik:"Fraunces",Georgia,serif;--govde:"Work Sans",system-ui,sans-serif;--bw:600;--bs:normal;--bt:none;--bh:-.02em}
+.ferah{--zemin:#FFFFFF;--zemin2:#F2F5F6;--yazi:#16202A;--soluk:#5B6773;--cizgi:#DFE5E8;--baslik:"Manrope",system-ui,sans-serif;--govde:"Manrope",system-ui,sans-serif;--bw:700;--bs:normal;--bt:none;--bh:-.03em}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--govde);color:var(--yazi);background:var(--zemin);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.kap{max-width:1120px;margin:0 auto;padding:0 22px}
+.b{font-family:var(--baslik);font-weight:var(--bw);font-style:var(--bs);text-transform:var(--bt);letter-spacing:var(--bh);line-height:1.02}
+.etiket{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--soluk);font-weight:500}
+.taslak{background:var(--yazi);color:var(--zemin);font-size:12.5px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+/* üst */
+header{position:absolute;left:0;right:0;z-index:5;color:#fff}
+.ust{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px;max-width:1120px;margin:0 auto}
+.marka{font-size:22px;text-decoration:none}
+nav{display:flex;gap:26px;font-size:14px;letter-spacing:.04em}
+nav a{text-decoration:none;opacity:.9}
+.ust .tel{font-size:14px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.6);padding-bottom:2px;white-space:nowrap}
+@media(max-width:760px){nav{display:none}}
+/* kahraman */
+.kahraman{position:relative;min-height:min(92vh,760px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.kahraman>img{position:absolute;inset:0}
+.kahraman:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.08) 35%,rgba(0,0,0,.62) 100%)}
+.kahraman .kap{position:relative;z-index:2;width:100%;padding-bottom:56px}
+.kahraman .etiket{color:rgba(255,255,255,.82)}
+.kahraman h1{font-size:clamp(46px,11vw,112px);margin:14px 0 18px;max-width:14ch;overflow-wrap:anywhere}
+.kahraman p{font-size:19px;max-width:34ch;opacity:.92}
+.dugmeler{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.d{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;font-weight:600;font-size:15.5px;letter-spacing:.03em;text-decoration:none;border-radius:2px}
+.d.ana{background:var(--vurgu);color:#fff}
+.d.ikinci{border:1px solid currentColor}
+.ferah .d,.sicak .d{border-radius:10px}
+/* tanıtım */
+.tanit{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:96px 0}
+.tanit .foto{aspect-ratio:4/5;overflow:hidden}
+.tanit h2{font-size:clamp(34px,5vw,54px);margin:12px 0 20px}
+.tanit p{color:var(--soluk);font-size:18px;max-width:46ch}
+.saatkisa{margin-top:26px;padding-top:20px;border-top:1px solid var(--cizgi);font-size:15px}
+@media(max-width:820px){.tanit{grid-template-columns:1fr;gap:34px;padding:64px 0}.tanit .foto{aspect-ratio:4/3}}
+/* hizmetler: menü düzeni */
+.hiz{background:var(--zemin2);padding:92px 0}
+.modern .hiz{color:#F2F0EC;--soluk:#A9A59D;--cizgi:#3A3936}
+.hiz h2{font-size:clamp(34px,5vw,54px);margin:12px 0 40px}
+.menu{list-style:none;columns:2;column-gap:64px}
+.menu li{break-inside:avoid;display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--cizgi)}
+.menu span{font-size:19px}
+.menu i{flex:1;border-bottom:1px dotted var(--soluk);opacity:.5;transform:translateY(-5px)}
+.menu b{font-weight:500;font-size:14px;color:var(--soluk);white-space:nowrap}
+@media(max-width:760px){.menu{columns:1}.hiz{padding:64px 0}}
+/* galeri */
+.galeri{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:260px 260px;gap:14px;padding:96px 0}
+.galeri div{overflow:hidden}
+.galeri div:first-child{grid-row:span 2}
+@media(max-width:760px){.galeri{grid-template-columns:1fr 1fr;grid-template-rows:240px 160px;padding:64px 0}.galeri div:first-child{grid-column:span 2;grid-row:auto}}
+/* ziyaret */
+.ziyaret{border-top:1px solid var(--cizgi);padding:92px 0}
+.ziyaret h2{font-size:clamp(34px,5vw,54px);margin:12px 0 36px}
+.bilgi{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:40px}
+.bilgi p{font-size:18px;margin-top:8px}
+.bilgi a{text-decoration:none;border-bottom:1px solid var(--cizgi)}
+.harita{aspect-ratio:16/7;background:var(--zemin2);overflow:hidden}
+.harita iframe{width:100%;height:100%;border:0;filter:grayscale(.35)}
+.yol{display:inline-block;margin-top:16px;font-weight:600;color:var(--vurgu);text-decoration:none}
+@media(max-width:760px){.harita{aspect-ratio:4/3}.ziyaret{padding:64px 0}}
+footer{border-top:1px solid var(--cizgi);padding:30px 0 120px;font-size:13px;color:var(--soluk)}
+footer .kap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.yapisik{position:fixed;left:0;right:0;bottom:0;display:flex;z-index:9;background:var(--zemin);border-top:1px solid var(--cizgi)}
+.yapisik a{flex:1;text-align:center;padding:16px 8px calc(16px + env(safe-area-inset-bottom));font-weight:600;font-size:15px;text-decoration:none}
+.yapisik a:first-child{background:var(--vurgu);color:#fff}
+@media(min-width:761px){.yapisik{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body class="{{STIL}}">
+<!-- TASLAK: satıştan sonra bu satırı sil -->
+<div class="taslak">{{AD}} için hazırlanmış örnek taslak · Fotoğraflar temsilîdir</div>
+<header>
+  <div class="ust">
+    <a class="marka b" href="#">{{AD}}</a>
+    <nav><a href="#hizmetler">Hizmetler</a><a href="#galeri">Galeri</a><a href="#ziyaret">Ziyaret</a></nav>
+    {{USTTEL}}
+  </div>
+</header>
+<main>
+  <section class="kahraman">
+    <img src="img/1.jpg" alt="{{AD}}" fetchpriority="high">
+    <div class="kap">
+      <div class="etiket">{{SEKTOR}} · {{SEMT}}</div>
+      <h1 class="b">{{AD}}</h1>
+      <p>{{SLOGAN}}</p>
+      <div class="dugmeler">{{BUTONLAR}}</div>
+    </div>
+  </section>
+
+  <div class="kap">
+    <section class="tanit">
+      <div class="foto"><img src="img/2.jpg" alt="{{AD}} içeriden" loading="lazy"></div>
+      <div>
+        <div class="etiket">Hakkımızda</div>
+        <h2 class="b">{{SEMT}}'de, sokağınızda.</h2>
+        <p>{{TANITIM}}</p>
+        {{SAATKISA}}
+      </div>
+    </section>
+  </div>
+
+  <section class="hiz" id="hizmetler">
+    <div class="kap">
+      <div class="etiket">Hizmetler</div>
+      <h2 class="b">Neler yapıyoruz</h2>
+      <ul class="menu">{{HIZMETLER}}</ul>
+    </div>
+  </section>
+
+  <div class="kap">
+    <section class="galeri" id="galeri">
+      <div><img src="img/3.jpg" alt="{{AD}}" loading="lazy"></div>
+      <div><img src="img/1.jpg" alt="{{AD}}" loading="lazy"></div>
+      <div><img src="img/2.jpg" alt="{{AD}}" loading="lazy"></div>
+    </section>
+  </div>
+
+  <section class="ziyaret" id="ziyaret">
+    <div class="kap">
+      <div class="etiket">Ziyaret</div>
+      <h2 class="b">Bize uğrayın</h2>
+      <div class="bilgi">{{BILGI}}</div>
+      <div class="harita"><iframe src="{{HARITA}}" loading="lazy" title="{{AD}} konumu"></iframe></div>
+      <a class="yol" href="{{YOL}}">Yol tarifi al →</a>
+    </div>
+  </section>
+</main>
+<footer><div class="kap"><span>© {{AD}} · {{SEMT}}</span><span>Harita © OpenStreetMap katkıcıları</span></div></footer>
+<div class="yapisik">{{YAPISIK}}</div>
+</body>
+</html>
